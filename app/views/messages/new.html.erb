@@ -9,9 +9,20 @@
   </ul>
 <% end %>
 
+<h3>New Message</h3>
 <%= form_for @message do |f| %>
   <%= f.label :to %>
   <%= f.text_field :to %>
+  <%= f.label :from %>
+  <%= f.text_field :from %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit %>
+<% end %>
+
+<h3>New Message from Address Book</h3>
+<%= form_for @message do |f| %>
+  <%= f.collection_select :to, Contact.order(:name), :phone, :name, include_blank: true %>
   <%= f.label :from %>
   <%= f.text_field :from %>
   <%= f.label :body %>
