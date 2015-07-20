@@ -1,1 +1,3 @@
 $('.success-notice-message').html("<%= flash[:notice] %>");
+$('.add-message-div').remove();
+$('.messages').html("<%= j render('messages') %>")
