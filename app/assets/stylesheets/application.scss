@@ -19,6 +19,7 @@
  body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+    background-color:#e1ebcf;
  }
 .jumbotron{
   background-image: url('http://i.huffpost.com/gen/1752628/images/o-TEXTING-facebook.jpg');
@@ -47,11 +48,20 @@
 .brand-name{
 }
 
-.btn-unique{
+.btn-pink{
   background-color:#fa6385;
   color:white;
     &:hover{
       background-color: #f98ca4;
+      color:white;
+    }
+}
+
+.btn-orange{
+  background-color:#faaa87;
+  color:white;
+    &:hover{
+      background-color: #fdc0a6;
       color:white;
     }
 }
