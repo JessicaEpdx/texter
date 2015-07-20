@@ -1,6 +1,9 @@
+<div class="new-contact">
+</div>
+
 <div class="centered">
   <h1>Address Book</h1>
-  <%= link_to 'Add A Contact', new_contact_path %>
+  <%= link_to 'Add A Contact', new_contact_path, remote: true, class:'add-contact' %>
 </div>
 
 <% if @contacts.any? %>
@@ -23,3 +26,6 @@
 <% else %>
   <h4>No contacts have been added to your Address Book.</h4>
 <% end %>
+
+<div class="spacer">
+</div>

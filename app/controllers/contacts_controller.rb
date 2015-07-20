@@ -2,10 +2,15 @@ class ContactsController < ApplicationController
 
   def index
     @contacts = Contact.all
+    @contact = Contact.new
   end
 
   def new
     @contact = Contact.new
+    respond_to do |format|
+      format.html {render :index }
+      format.js
+    end
   end
 
   def create
