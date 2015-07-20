@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720032447) do
+ActiveRecord::Schema.define(version: 20150720035535) do
 
   create_table "messages", force: :cascade do |t|
     t.string "to"
     t.string "from"
-    t.string "body"
+    t.text   "body"
   end
 
 end
