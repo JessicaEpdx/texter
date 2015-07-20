@@ -23,7 +23,7 @@ class ContactsController < ApplicationController
         format.js
       end
     else
-      flash[:notice] = "Oops! Please fill in name and phone number, do not include dashes."
+      flash[:notice] = "Oops! Please fill in a name and phone number."
       respond_to do |format|
         format.html {render 'index'}
         format.js {render 'error'}

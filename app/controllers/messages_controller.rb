@@ -7,15 +7,27 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
     @contacts = Contact.all
+    respond_to do |format|
+      format.html {render :index }
+      format.js
+    end
   end
 
   def create
     @message = Message.new(message_params)
+    @messages = Message.all
     if @message.save
       flash[:notice] = "Your message was sent"
-      redirect_to messages_path
+      respond_to do |format|
+        format.html {render :index }
+        format.js
+      end
     else
-      render 'new'
+      flash[:notice] = "Please try again."
+      respond_to do |format|
+        format.html {render 'index'}
+        format.js {render 'error'}
+      end
     end
   end
 

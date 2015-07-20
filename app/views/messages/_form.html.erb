@@ -1,0 +1,36 @@
+<div class="add-message-div centered well">
+  <h1>Add a message</h1>
+
+  <% if @message.errors.any? %>
+    <p>Something went wrong:</p>
+    <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="failure-notice-message">
+  </div>
+
+  <h3>New Message</h3>
+  <%= form_for @message, remote: true do |f| %>
+    <%= f.label :to %>
+    <%= f.text_field :to %>
+    <%= f.label :from %>
+    <%= f.text_field :from %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+    <%= f.submit %>
+  <% end %>
+
+  <h3>New Message from Address Book</h3>
+  <%= form_for @message, remote: true do |f| %>
+    <%= f.collection_select :to, Contact.order(:name), :phone, :name, include_blank: true %>
+    <%= f.label :from %>
+    <%= f.text_field :from %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+    <%= f.submit %>
+  <% end %>
+</div>
