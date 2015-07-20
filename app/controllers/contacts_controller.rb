@@ -15,6 +15,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
+    @contacts = Contact.all
     if @contact.save
       flash[:notice]="You added " + @contact.name + " to your Address Book!"
       respond_to do |format|

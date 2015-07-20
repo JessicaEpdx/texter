@@ -1,0 +1,20 @@
+<% if @contacts.any? %>
+    <table class="table table-striped centered">
+      <thead>
+        <tr>
+          <th class="centered"><h1>Name</h1></th>
+          <th class="centered"><h1>Phone Number</h1></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @contacts.each do |contact| %>
+          <tr>
+            <td><h3><%= contact.name %></h3></td>
+            <td><h3><%= contact.phone %></h3></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% else %>
+  <h4>No contacts have been added to your Address Book.</h4>
+<% end %>

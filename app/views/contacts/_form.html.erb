@@ -1,7 +1,5 @@
 <div class="add-contact-form well">
   <h1>Add a contact</h1>
-  <div class="notice">
-  </div>
   <%= form_for @contact, remote: true do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>

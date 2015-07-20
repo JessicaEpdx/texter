@@ -1,3 +1,4 @@
 $('.add-contact').show();
 $('.add-contact-form').remove();
-$('.notice').html("<%= flash[:notice] %>");
+$('.contacts-list').html("<%= j render('contacts_table') %>")
+$('.success-notice').html("<%= flash[:notice] %>");
