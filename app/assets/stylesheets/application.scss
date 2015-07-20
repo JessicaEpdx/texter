@@ -20,7 +20,11 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     background-color:#e1ebcf;
- }
+}
+
+.table-striped{
+  padding:80px;
+}
 .jumbotron{
   background-image: url('http://i.huffpost.com/gen/1752628/images/o-TEXTING-facebook.jpg');
   background-size: cover;
@@ -35,7 +39,7 @@
     }
 }
 
-.messages{
+.centered{
   text-align:center;
 }
 
