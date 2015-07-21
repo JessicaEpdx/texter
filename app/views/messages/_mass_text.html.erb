@@ -1,0 +1,19 @@
+<h3>Send a Mass Text</h3>
+<%= form_tag(new_message_path, method: :get) do %>
+<%= label_tag "Phone Numbers" %>
+<%= select_tag "contacts", options_from_collection_for_select(@contacts, "phone", "name"), include_blank: true %>
+<%= select_tag "contacts", options_from_collection_for_select(@contacts, "phone", "name"), include_blank: true %>
+<%= select_tag "contacts", options_from_collection_for_select(@contacts, "phone", "name"), include_blank: true %>
+<%= select_tag "contacts", options_from_collection_for_select(@contacts, "phone", "name"), include_blank: true %>
+<%= select_tag "contacts", options_from_collection_for_select(@contacts, "phone", "name"), include_blank: true %>
+<%= select_tag "contacts", options_from_collection_for_select(@contacts, "phone", "name"), include_blank: true %>
+
+<br />
+
+<%= label_tag "From what phone number?" %>
+<%= text_field_tag "from" %>
+<%= label_tag "Body of text" %>
+<%= text_field_tag "body" %>
+<%= submit_tag "Create Message"%>
+<% end %>
+</div>

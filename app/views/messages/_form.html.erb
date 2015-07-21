@@ -13,7 +13,6 @@
   <div class="failure-notice-message">
   </div>
 
-  <h3>New Message</h3>
   <%= form_for @message, remote: true do |f| %>
     <%= f.label :to %>
     <%= f.text_field :to %>
@@ -24,6 +23,8 @@
     <%= f.submit %>
   <% end %>
 
+  <br />
+
   <h3>New Message from Address Book</h3>
   <%= form_for @message, remote: true do |f| %>
     <%= f.collection_select :to, Contact.order(:name), :phone, :name, include_blank: true %>
@@ -33,4 +34,5 @@
     <%= f.text_field :body %>
     <%= f.submit %>
   <% end %>
-</div>
+
+  <br />

@@ -1,7 +1,7 @@
 class Message < ActiveRecord::Base
 
   before_create :send_sms
-
+  has_many :numbers
   private
 
   def send_sms
