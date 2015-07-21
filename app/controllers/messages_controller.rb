@@ -11,10 +11,6 @@ class MessagesController < ApplicationController
   def new
     @messages = Message.all
     @message = Message.new
-    respond_to do |format|
-      format.html {render :index }
-      format.js
-    end
   end
 
   def create

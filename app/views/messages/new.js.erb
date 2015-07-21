@@ -1,1 +1,5 @@
-$('.add-message').hide().after("<%= j render('form') %>");
+$('.add-message').hide();
+$('.mass-text').hide();
+$('.add-mass').show();
+$('.message-form').show();
+$('.message-form').html("<%= j render('form') %>");

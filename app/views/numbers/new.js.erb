@@ -1,1 +1,5 @@
-$('.mass-text').html("foo");
+$('.add-message').show();
+$('.add-mass').hide();
+$('.mass-text').show();
+$('.message-form').hide();
+$('.mass-text').html("<%= j render('massform') %>");
